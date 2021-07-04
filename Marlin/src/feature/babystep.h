@@ -36,7 +36,7 @@
   #define BS_AXIS(I) AxisEnum(I)
 #else
   #define BS_AXIS_IND(A) 0
-  #define BS_AXIS(I) Z_AXIS
+  #define BS_AXIS(I) false
 #endif
 
 #if ENABLED(BABYSTEP_DISPLAY_TOTAL)
@@ -72,7 +72,7 @@ public:
   // apply accumulated babysteps to the axes.
   //
   static inline void task() {
-    LOOP_LE_N(i, BS_AXIS_IND(Z_AXIS)) step_axis(BS_AXIS(i));
+    //LOOP_LE_N(i, BS_AXIS_IND(Z_AXIS)) step_axis(BS_AXIS(i));
   }
 
 private:

@@ -2978,7 +2978,7 @@ void Stepper::report_positions() {
 
       #endif
 
-      case Z_AXIS: {
+      /*case Z_AXIS: {
 
         #if CORE_IS_XZ
           BABYSTEP_CORE(X, Z, BABYSTEP_INVERT_Z, direction, (CORESIGN(1)<0));
@@ -3084,7 +3084,7 @@ void Stepper::report_positions() {
         #endif
 
       } break;
-
+*/
       #if LINEAR_AXES >= 4
         case I_AXIS: BABYSTEP_AXIS(I, 0, direction); break;
       #endif
